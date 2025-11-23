@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>Emoji Rush ⚡ | Built by @pavan_explains</title>
+    <meta name="description" content="Play the Cyberpunk Emoji Runner. No install needed. Built with JS & Canvas.">
+    <meta name="theme-color" content="#050510">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Emoji Rush ⚡">
+    <meta property="og:description" content="Can you beat my high score? Play the Neon Runner now.">
+    <meta property="og:image" content="/assets/preview.png"> 
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😎</text></svg>">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-wrapper">
+        <canvas id="gameCanvas"></canvas>
+
+        <button id="sound-btn">🔊</button>
+
+        <div id="ui-layer">
+            
+            <div id="start-screen" class="screen active">
+                <h1 class="title">EMOJI RUSH</h1>
+                <p class="subtitle">Select your runner</p>
+                
+                <div class="character-grid">
+                    <button class="char-btn selected" data-char="😎">😎</button>
+                    <button class="char-btn" data-char="👽">👽</button>
+                    <button class="char-btn" data-char="🤠">🤠</button>
+                    <button class="char-btn" data-char="🤖">🤖</button>
+                </div>
+
+                <button id="start-btn" class="glow-btn">PLAY NOW</button>
+                
+                <div class="branding">
+                    Built by <a href="https://instagram.com/pavan_explains" target="_blank">@pavan_explains</a> 🚀
+                </div>
+            </div>
+
+            <div id="game-over-screen" class="screen hidden">
+                <h1>CRASHED!</h1>
+                <div class="score-board">
+                    <p>Score: <span id="final-score">0</span></p>
+                    <p class="high-score">Best: <span id="best-score">0</span></p>
+                </div>
+                <button id="restart-btn" class="glow-btn">TRY AGAIN</button>
+                
+                <div class="branding-small">
+                    Follow <a href="https://instagram.com/pavan_explains" target="_blank">@pavan_explains</a> for more!
+                </div>
+            </div>
+
+            <div id="hud" class="hidden">
+                <div class="score-pill">
+                    <span id="score-display">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
